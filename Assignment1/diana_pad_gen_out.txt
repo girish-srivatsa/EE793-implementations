@@ -1,4 +1,3 @@
- 
 -----------------
 |   | A B C D E |
 -----------------
@@ -12,7 +11,7 @@
 -----------------
 | E | D E C A B |
 -----------------
- 
+trigrams: AAA ABC ADE BBD BEE CCE CDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -26,7 +25,7 @@
 -----------------
 | E | D B E A C |
 -----------------
- 
+trigrams: AAA ABC ADE BBE BDD CCD CEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -40,7 +39,7 @@
 -----------------
 | E | C E A D B |
 -----------------
- 
+trigrams: AAA ABD ACE BBC BEE CCD DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -54,7 +53,7 @@
 -----------------
 | E | C B A E D |
 -----------------
- 
+trigrams: AAA ABD ACE BBE BCC CDD DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -68,7 +67,7 @@
 -----------------
 | E | B A C E D |
 -----------------
- 
+trigrams: AAA ABE ACD BBC BDD CCE DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -82,7 +81,7 @@
 -----------------
 | E | B A E D C |
 -----------------
- 
+trigrams: AAA ABE ACD BBD BCC CEE DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -96,7 +95,7 @@
 -----------------
 | E | D C B A E |
 -----------------
- 
+trigrams: AAB ACC ADE BBD BCE CDD EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -110,7 +109,7 @@
 -----------------
 | E | D B E A C |
 -----------------
- 
+trigrams: AAB ACC ADE BBE BCD CEE DDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -124,7 +123,7 @@
 -----------------
 | E | E D C B A |
 -----------------
- 
+trigrams: AAB ACD AEE BBC BDE CCE DDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -138,7 +137,7 @@
 -----------------
 | E | E C B D A |
 -----------------
- 
+trigrams: AAB ACD AEE BBD BCE CCC DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -152,7 +151,7 @@
 -----------------
 | E | C D A B E |
 -----------------
- 
+trigrams: AAB ACE ADD BBC BDE CCD EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -166,7 +165,7 @@
 -----------------
 | E | C B A E D |
 -----------------
- 
+trigrams: AAB ACE ADD BBE BCD CCC DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -180,7 +179,7 @@
 -----------------
 | E | D E C A B |
 -----------------
- 
+trigrams: AAC ABB ADE BCD BEE CCE DDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -194,7 +193,7 @@
 -----------------
 | E | D C B A E |
 -----------------
- 
+trigrams: AAC ABB ADE BCE BDD CCD EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -208,7 +207,7 @@
 -----------------
 | E | E C B D A |
 -----------------
- 
+trigrams: AAC ABD AEE BBB BCE CCD DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -222,7 +221,7 @@
 -----------------
 | E | E B D C A |
 -----------------
- 
+trigrams: AAC ABD AEE BBE BCC CDE DDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -236,7 +235,7 @@
 -----------------
 | E | B A C E D |
 -----------------
- 
+trigrams: AAC ABE ADD BBB BCD CCE DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -250,7 +249,7 @@
 -----------------
 | E | B A D C E |
 -----------------
- 
+trigrams: AAC ABE ADD BBD BCC CDE EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -264,7 +263,7 @@
 -----------------
 | E | C D A B E |
 -----------------
- 
+trigrams: AAD ABB ACE BCC BDE CDD EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -278,7 +277,7 @@
 -----------------
 | E | C E A D B |
 -----------------
- 
+trigrams: AAD ABB ACE BCD BEE CCC DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -292,7 +291,7 @@
 -----------------
 | E | E D C B A |
 -----------------
- 
+trigrams: AAD ABC AEE BBB BDE CCE CDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -306,7 +305,7 @@
 -----------------
 | E | E B D C A |
 -----------------
- 
+trigrams: AAD ABC AEE BBE BDD CCC CDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -320,7 +319,7 @@
 -----------------
 | E | B A E D C |
 -----------------
- 
+trigrams: AAD ABE ACC BBB BCD CEE DDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -334,7 +333,7 @@
 -----------------
 | E | B A D C E |
 -----------------
- 
+trigrams: AAD ABE ACC BBC BDD CDE EEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -348,7 +347,7 @@
 -----------------
 | E | A D E B C |
 -----------------
- 
+trigrams: AAE ABB ACD BCC BDE CEE DDD  
 -----------------
 |   | A B C D E |
 -----------------
@@ -362,7 +361,7 @@
 -----------------
 | E | A C B E D |
 -----------------
- 
+trigrams: AAE ABB ACD BCE BDD CCC DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -376,7 +375,7 @@
 -----------------
 | E | A D E B C |
 -----------------
- 
+trigrams: AAE ABC ADD BBB BDE CCD CEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -390,7 +389,7 @@
 -----------------
 | E | A E D C B |
 -----------------
- 
+trigrams: AAE ABC ADD BBD BEE CCC CDE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -404,7 +403,7 @@
 -----------------
 | E | A C B E D |
 -----------------
- 
+trigrams: AAE ABD ACC BBB BCE CDD DEE  
 -----------------
 |   | A B C D E |
 -----------------
@@ -418,3 +417,4 @@
 -----------------
 | E | A E D C B |
 -----------------
+trigrams: AAE ABD ACC BBC BEE CDE DDD

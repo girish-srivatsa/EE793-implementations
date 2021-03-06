@@ -66,7 +66,7 @@ freq_table_alpha_26 = {
 
 def pad(plaintext, key_size):
     len_last_block = len(plaintext) % key_size
-    left = key_size - len(len_last_block)
+    left = key_size - len_last_block
     return plaintext + left * "A"
 
 
@@ -140,10 +140,11 @@ def decrypt(ciphertext, key):
 def freq_table(given_text):
     freq_table_text = defaultdict(lambda: 0, {})
     for i in range(0, len(given_text)):
+        if given_text[i] != " ":
+            max_index = given_text[i]
         freq_table_text[given_text[i]] += 1
-    max_index = given_text[0]
     for i in freq_table_text:
-        if freq_table_text[i] > freq_table_text[max_index]:
+        if freq_table_text[i] > freq_table_text[max_index] and i != " ":
             max_index = i
     return max_index
 
@@ -171,14 +172,31 @@ def index_return(given_text):
 def len_analyze(ciphertext):
     index_incidence = index_return(given_text=''.join(ciphertext.split()))
     n = len(ciphertext) / 2
-    l = (0.02654 * n) / ((0.065 - index_incidence) + n * (index_incidence - 0.03846))
-    print(l)
-    return int(l // 1)
+    num_space=len(ciphertext) - len(''.join(ciphertext.split()))
+    c = num_space/(n)
+    l = (0.02654 * n) / ((1/c)*(0.065 - index_incidence) + n * (index_incidence - 0.03846))
+    return l
+
+
+def wrapper(ciphertext):
+    length=len_analyze(ciphertext=ciphertext)
+    key_set=[]
+    if 0.4 < length-(length // 1) < 0.6:
+        length=int(length//1)
+        key_val = break_cipher(ciphertext=ciphertext,length=length)
+        key_set.append(key_val)
+        length += 1
+        key_val = break_cipher(ciphertext=ciphertext,length=length)
+        key_set.append(key_val)
+    else:
+        length = round(length)
+        key_val = break_cipher(ciphertext=ciphertext,length=length)
+        key_set.append(key_val)
+    print(key_set)
 
 
 def break_cipher(ciphertext, length):
     string_set = revert(ciphertext)
-    string_set=''.join(string_set.split())
     ciphertext_words = ciphertext.split()
     string_set_length = [""] * length
     for i in range(length):
@@ -190,6 +208,7 @@ def break_cipher(ciphertext, length):
     key_set_sieve = {}
     for i in key_set_tuple:
         key_set.append(''.join(i))
+    print(max_set_length)
     for i in key_set:
         decrypt_set = decrypt(ciphertext=ciphertext,key=convert(i)).split()
         decrypt_lower_list = [revert(decrypt_text).lower() for decrypt_text in decrypt_set]
@@ -197,21 +216,25 @@ def break_cipher(ciphertext, length):
         decrypt_lower_set = set(decrypt_lower_list)
         if len(decrypt_lower_set) == len(decrypt_correct_set):
             key_set_sieve.update({i:revert(' '.join(decrypt_set))})
-    print(key_set_sieve)
+    return key_set_sieve
     # max_freq(given_text=convert(string_set_length[1]))
 
 
 plain_text = "THE TRUTH IS ALWAYS SOMETHING THAT IS TOLD NOT SOMETHING THAT IS KNOWN IF THERE WERE NO SPEAKING OR WRITING THERE WOULD BE NO TRUTH ABOUT ANYTHING THERE WOULD ONLY BE WHAT IS"
 plain_text_5 = convert(plain_text)
-key_26 = "OP"
+key_26 = "NHM"
 key_5 = convert(key_26)
-print(len(plain_text_5))
 encrypt_5 = encrypt(plaintext=plain_text_5, key=key_5)
-str_1 = ["E", "T", "N", "O", "R", "I", "A", "S"]
-table_1 = ""
-print(revert(decrypt(encrypt_5,key_5)) == plain_text)
+num_char=len(''.join(plain_text.split()))
+num_space=len(plain_text)-num_char
+#print(len_analyze(ciphertext=encrypt_5))
+#print(revert(encrypt_5))
+#str_1 = ["E", "T", "N", "O", "R", "I", "A", "S"]
+#table_1 = ""
+#print(revert(decrypt(encrypt_5,key_5)) == plain_text)
 print(len_analyze(encrypt_5))
-break_cipher(ciphertext=encrypt_5,length=len_analyze(encrypt_5))
+#wrapper(ciphertext=encrypt_5)
+print(break_cipher(ciphertext=encrypt_5,length=3))
 
 
 def gen_inverse_set():
